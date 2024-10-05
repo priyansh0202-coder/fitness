@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
-import { auth } from '../services/Firebase'; // Ensure you're importing auth correctly
+import { auth } from '../services/Firebase';
 
 function SetGoals() {
     const [goal, setGoal] = useState('');
     const [currentGoal, setCurrentGoal] = useState('');
 
-    // Initialize Firestore
+
     const db = getFirestore();
 
     const handleSetGoal = async () => {
